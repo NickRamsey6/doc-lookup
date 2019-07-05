@@ -26,7 +26,7 @@ import 'bootstrap';
 $(document).ready(function() {
   $('#doctors').click(function() {
     let request = new XMLHttpRequest();
-    const url = `https://bikeindex.org:443/api/v3/search?page=1&per_page=1&location=IP&distance=10&stolenness=stolen`;
+    const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&sort=full-name-asc&skip=0&limit=1&user_key=2ac8627f15744eae8b7df8480f224360`;
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
         const response = JSON.parse(this.responseText);
@@ -36,7 +36,7 @@ $(document).ready(function() {
     request.open("GET", url, true);
     request.send();
     const getElements = function(response) {
-      $('.results').text(`The doctors are ${response.bikes["0"].id}`);
+      $('.results').text(`The doctors are ${response.data["0"].profile.first_name}`);
       console.log(response.bikes);
       }
   });
