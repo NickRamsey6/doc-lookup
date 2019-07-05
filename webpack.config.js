@@ -30,7 +30,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
                 'style-loader',
                 'css-loader'
               ]
-            }
+            },
+            
           ]
         }
       };
