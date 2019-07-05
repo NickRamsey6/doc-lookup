@@ -26,7 +26,7 @@ import 'bootstrap';
 $(document).ready(function() {
   $('#doctors').click(function() {
     let request = new XMLHttpRequest();
-    const url = `https://bikeindex.org:443/api/v3/search?page=1&per_page=100&location=%E2%80%9CPortland%2C%20OR%E2%80%9D&distance=10&stolenness=proximity&access_token=api_key`;
+    const url = `https://bikeindex.org:443/api/v3/search?page=1&per_page=1&location=IP&distance=10&stolenness=stolen`;
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
         const response = JSON.parse(this.responseText);
@@ -36,7 +36,8 @@ $(document).ready(function() {
     request.open("GET", url, true);
     request.send();
     const getElements = function(response) {
-      $('.results').text(`The doctors are ${response.bikes['0']}`);
+      $('.results').text(`The doctors are ${response.bikes["0"].id}`);
+      console.log(response.bikes);
       }
   });
 });
