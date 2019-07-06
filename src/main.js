@@ -20,15 +20,15 @@ $(document).ready(function() {
 
     const getElements = function(response) {
       for (let i = 0; i < response.data.length; i++) {
-        console.log(response.data.length);
+        // console.log(response.data.length);
         $('.results').append('<br>').append('<ui>' + `Dr. ${response.data[i].profile.first_name} ${response.data[i].profile.last_name}`);
-        if (response.data[i].practices.length > 1) {
-          for (let x = 0; x < response.data[i].practices.length; x++) {
-            $('.results').append('<br>').append('<li>' + `Address: ${response.data[x].practices[0].visit_address.street}`);
-          }
+        // if (response.data[i].practices.length > 1) {
+          // for (let x = 0; x < response.data[i].practices.length; x++) {
+            $('.results').append('<br>').append('<li>' + `Address: ${response.data[i].practices[0].visit_address.street}`);
+          // }
         // } else {
         //   $('.results').append('<br>').append('<li>' + `Address: ${response.data.[i].practices[0].visit_address.street}`);
-        }
+        // }
       }
     }
   });
