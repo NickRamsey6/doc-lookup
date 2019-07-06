@@ -35,10 +35,6 @@ $(document).ready(function() {
         $('.results').append('<li>' + `Website: ${response.data[i].practices[0].website}`);
         //return doctor new patients
         $('.results').append('<li>' + `Accepting New Patients: ${response.data[i].practices[0].accepts_new_patients}`);
-          // }
-        // } else {
-        //   $('.results').append('<br>').append('<li>' + `Address: ${response.data.[i].practices[0].visit_address.street}`);
-        // }
       }
     }
   });
