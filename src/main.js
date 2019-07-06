@@ -42,7 +42,6 @@ $(document).ready(function() {
         $('.results').text(`The doctors are ${response.data[i].profile.first_name}`);
       }
       // $('.results').text(`The doctors are ${response.data[i].profile.first_name}`);
-      // console.log(response.bikes);
     }
   });
 });
