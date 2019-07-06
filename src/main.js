@@ -20,11 +20,16 @@ $(document).ready(function() {
 
     const getElements = function(response) {
       for (let i = 0; i < response.data.length; i++) {
-        // console.log(response.data.length);
+        // return doctor name
         $('.results').append('<br>').append('<ui>' + `Dr. ${response.data[i].profile.first_name} ${response.data[i].profile.last_name}`);
-        // if (response.data[i].practices.length > 1) {
-          // for (let x = 0; x < response.data[i].practices.length; x++) {
-            $('.results').append('<br>').append('<li>' + `Address: ${response.data[i].practices[0].visit_address.street}`);
+        //return doctor address
+        $('.results').append('<br>').append('<li>' + `Address: ${response.data[i].practices[0].visit_address.street} ${response.data[i].practices[0].visit_address.city}, ${response.data[i].practices[0].visit_address.state} ${response.data[i].practices[0].visit_address.zip}`);
+        //return doctor phone number
+        $('.results').append('<li>' + `Phone: ${response.data[i].practices[0].phones[0].number}`);
+        //return doctor website url
+        $('.results').append('<li>' + `Website: ${response.data[i].practices[0].website}`);
+        //return doctor new patients
+        $('.results').append('<li>' + `Accepting New Patients: ${response.data[i].practices[0].accepts_new_patients}`);
           // }
         // } else {
         //   $('.results').append('<br>').append('<li>' + `Address: ${response.data.[i].practices[0].visit_address.street}`);
