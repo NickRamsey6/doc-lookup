@@ -27,8 +27,8 @@ _For my second code review, I am building a webpage that utilizes the BetterDoct
 | Find Doctors in Portland | "Portland" | Doctors in Portland |
 | Find Doctors by Symptom | "sore throat" | Doctors that treat sore throats |
 | Find Doctors by Name | "Jones" | Doctors named Jones |
-| API error | 400 or 401 | Error message | Did Not Accomplish
-| Return No Doctor match | Dr. Doolittle | No Doctors fit that search query | Did Not Accomplish
+| API error | 400 or 401 | Error message |
+| Return No Doctor match | Dr. Doolittle | No Doctors fit that search query |
 
 
 ## Known Bugs
