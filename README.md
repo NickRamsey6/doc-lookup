@@ -33,8 +33,7 @@ _For my second code review, I am building a webpage that utilizes the BetterDoct
 
 ## Known Bugs
 
-* _No API error message_
-* _No empty results message_
+* _Pulls from the first office it finds so may not be local_
 * _Div does not clear after multiple searches_
 
 ## Support and contact details

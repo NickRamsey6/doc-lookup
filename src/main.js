@@ -31,7 +31,6 @@ $(document).ready(function() {
         //return doctor new patients
         $('.results').append('<li>' + `Accepting New Patients: ${body.data[i].practices[0].accepts_new_patients}`);
       }
-      console.log(body.data);
       if (body.data.length === 0) {
         $('.results').text('Your Search Returned No Results');
       }
