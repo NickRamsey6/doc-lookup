@@ -2,10 +2,12 @@ import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import {DoctorFinder} from './docs.js';
-
-
+// import audio from './audio/dre.mp3';
+//
+// const drDre = new Audio('./audio/dre.mp3');
 
 $(document).ready(function() {
+  // drDre.play();
   $('#location').click(function() {
     const city = $('#city').val();
     const name = $('#name').val();
