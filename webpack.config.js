@@ -45,13 +45,12 @@ const Dotenv = require('dotenv-webpack');
            }
          },
          {
-           test: /\.(gif|png|jpe?g|svg|bmp|.mp3)$/,
+           test: /\.(gif|png|jpe?g|svg|bmp|)$/,
            use: [
              {
                loader: 'file-loader',
                options: {
-                 name: '[name].[ext]',
-                 outputPath:
+                 name: '[name].[ext]'
                }
              }
            ]

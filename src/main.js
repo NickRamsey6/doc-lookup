@@ -4,10 +4,12 @@ import 'bootstrap';
 import {DoctorFinder} from './docs.js';
 // import audio from './audio/dre.mp3';
 //
-// const drDre = new Audio('./audio/dre.mp3');
+
+const drDre = require('./audio/dre.mp3');
+const music = new Audio(drDre);
 
 $(document).ready(function() {
-  // drDre.play();
+  music.play();
   $('#location').click(function() {
     const city = $('#city').val();
     const name = $('#name').val();
