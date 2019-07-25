@@ -2,13 +2,31 @@ import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import {DoctorFinder} from './docs.js';
-// import audio from './audio/dre.mp3';
-//
-
 const drDre = require('./audio/dre.mp3');
 const music = new Audio(drDre);
 
 $(document).ready(function() {
+  // if (typeof music.loop == 'boolean')
+  // {
+  //   music.loop = true;
+  // }
+  // else {
+  //   {
+  //     music.addEventListener('ended', function() {
+  //       this.currentTime = 0;
+  //       this.play();
+  //     }, false);
+  //   }
+  // }
+  //
+  // music.pause();
+  // setTimeout(function () {
+  //   music.play();
+  // }, 150);
+  // const playPromise = music.play();
+  // if (playPromise !== null) {
+  //   playPromise.catch(() => { music.play();} )
+  // }
   music.play();
   $('#location').click(function() {
     const city = $('#city').val();
